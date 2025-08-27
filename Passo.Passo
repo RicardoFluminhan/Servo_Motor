@@ -1,0 +1,87 @@
+🤖 Meu Projeto com ESP32: O Servo Motor Dançarino e os LEDs! 🚦
+E aí, pessoal! 👋
+
+Olha que daora o projeto que eu montei pra aula! A ideia era fazer um servo motor se mexer de um lado pro outro, tipo um limpador de para-brisa, sabe? E pra ficar mais maneiro, coloquei uns LEDs pra acenderem junto com o movimento. Ficou parecendo um scanner de filme! 👾
+
+É bem de boa de fazer e o resultado final é muito legal. Se liga em como eu fiz!
+
+✅ O que você vai precisar (minha listinha de compras 😅):
+🔌 1 Placa ESP32 (a nossa de sempre)
+
+⚙️ 1 Servo Motor azulzinho (o meu é o SG90)
+
+❤️ 1 LED vermelho
+
+💛 1 LED amarelo
+
+💙 1 LED azul
+
+〰️ 3 Resistores de 220Ω (aqueles pequenininhos)
+
+🛠️ 1 Protoboard
+
+🔗 Vários Fios Jumper (peguei um monte pra garantir)
+
+💻 1 Cabo USB pra ligar tudo no PC
+
+🛠️ Passo 1: Montando o quebra-cabeça na Protoboard
+Essa é a parte mais legal! Parece Lego, mas com eletricidade. 😂
+
+Primeiro, o ESP32: Espeta ele bem no meio da protoboard.
+
+Ligar a energia ⚡:
+
+Pega um fio e liga o pino VIN do ESP32 na linha vermelha (+) da protoboard.
+
+Pega outro fio e liga o pino GND na linha azul (-). Pronto, agora a protoboard toda tem energia!
+
+Conectando o Servo 🕹️: O servo tem 3 fios, não tem como errar:
+
+Fio Vermelho: Vai na linha vermelha (+), junto com o VIN.
+
+Fio Marrom (ou preto): Vai na linha azul (-), junto com o GND.
+
+Fio Laranja (ou amarelo): Esse é o fio do sinal. Eu conectei ele no pino D19 do ESP32.
+
+Agora os LEDs ❤️💛💙:
+
+Coloca os três LEDs na protoboard, um do lado do outro.
+
+A perninha curta de TODOS eles vai na linha azul (-).
+
+A perninha longa de cada um vai num resistor. A outra ponta do resistor vai num pino do ESP32. Eu fiz assim:
+
+LED da Esquerda (o azul) ➡️ foi no pino D2.
+
+LED do Meio (o amarelo) ➡️ foi no pino D4.
+
+LED da Direita (o vermelho) ➡️ foi no pino D18.
+
+Dá uma olhada geral pra ver se todos os fios estão firmes. A minha montagem ficou igual a da foto que eu te mandei!
+
+💻 Passo 2: Preparando o PC
+Antes de passar o código, tem que arrumar a Arduino IDE.
+
+Instalar o suporte do ESP32: Se você já fez o projeto do sensor de temperatura, já deve ter isso pronto. Se não, tem que ir lá em Arquivo > Preferências e colar o link do ESP32. Depois é só instalar no Gerenciador de Placas.
+
+Instalar a Biblioteca do Servo: Essa é importante! A biblioteca normal não rola direito.
+
+Vai em Ferramentas > Gerenciar Bibliotecas....
+
+Procura por ESP32Servo e manda instalar. Facinho!
+
+🚀 Passo 3: Passando o Código e Vendo a Mágica Acontecer!
+Agora é a hora da verdade!
+
+Com o código que o professor passou já aberto na Arduino IDE, espeta o cabo USB no ESP32 e no computador.
+
+Vai lá em Ferramentas e escolhe a placa (a nossa é a "DOIT ESP32 DEVKIT V1") e a porta COM certa.
+
+Clica na setinha pra Carregar o código. Às vezes tem que segurar o botão "BOOT" da plaquinha pra funcionar.
+
+Fica de olho na protoboard... 👀
+
+🎉 O que vai acontecer (se tudo deu certo!):
+Assim que o código carregar, o servo motor vai começar a se mexer sozinho, indo de um lado pro outro! E o mais legal é que os LEDs vão acender junto: quando o motor for pra direita, o LED vermelho acende. Quando for pro meio, o amarelo acende. E quando for pra esquerda, o azul acende. Fica nesse loop infinito!
+
+É isso! Projeto finalizado com sucesso! 🥳 Espero que ajude vocês a montarem o de vocês também!
